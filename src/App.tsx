@@ -45,7 +45,7 @@ function App() {
           className="resume"
           onClick={() => {
             const link = document.createElement('a');
-            link.href = '/assets/docs/Oliver_Haran_Resume_2026.docx';
+            link.href = '/portfolio/docs/Oliver_Haran_Resume_2026.docx';
             link.download = 'Oliver_Haran_Resume_2026.docx';
             document.body.appendChild(link);
             link.click();
