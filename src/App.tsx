@@ -4,25 +4,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
-interface PortfolioProject {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  image: string;
-  alt: string;
-}
+// interface PortfolioProject {
+//   id: string;
+//   title: string;
+//   description: string;
+//   thumbnail: string;
+//   image: string;
+//   alt: string;
+// }
 
-interface PortfolioCategory {
-  id: string;
-  title: string;
-  description: string;
-  projects: string;
-}
+// interface PortfolioCategory {
+//   id: string;
+//   title: string;
+//   description: string;
+//   projects: string;
+// }
 
-interface PortfolioData {
-  categories: string;
-}
+// interface PortfolioData {
+//   categories: string;
+// }
 
 function App() {
 
