@@ -1,0 +1,19 @@
+{
+    "categories": [
+        {
+            "id": "sites",
+            "title": "Websites",
+            "description": "Website design and development projects",
+            "projects": [
+                {
+                    "id": "site1",
+                    "title": "Site 1",
+                    "description": "Site 1 website",
+                    "thumbnail": "images/sites/thumb.jpg",
+                    "image": "images/sites/full.jpg",
+                    "alt": "Site 1 website"
+                }
+            ]
+        }
+    ]
+}

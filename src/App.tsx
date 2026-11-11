@@ -4,6 +4,26 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+interface PortfolioProject {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  image: string;
+  alt: string;
+}
+
+interface PortfolioCategory {
+  id: string;
+  title: string;
+  description: string;
+  projects: string;
+}
+
+interface PortfolioData {
+  categories: string;
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,17 +36,24 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Oliver Haran</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            Welcome to the potfolio site! For any questions, please email to <a href="mailto:oliverharan@live.com?subject=Github%20Portfolio:%20">oliverharan@live.com</a>
           </p>
         </div>
         <button
           type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          className="resume"
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/assets/docs/Oliver_Haran_Resume_2026.docx';
+            link.download = 'Oliver_Haran_Resume_2026.docx';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
         >
-          Count is {count}
+          Download resume
         </button>
       </section>
 
