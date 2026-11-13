@@ -1,148 +1,170 @@
-//import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
 
-// interface PortfolioProject {
-//   id: string;
-//   title: string;
-//   description: string;
-//   thumbnail: string;
-//   image: string;
-//   alt: string;
-// }
+import { useRef, useState } from 'react';
 
-// interface PortfolioCategory {
-//   id: string;
-//   title: string;
-//   description: string;
-//   projects: string;
-// }
+import heroImg from './assets/hero.png';
+import reactLogo from './assets/react.svg';
+import viteLogo from './assets/vite.svg';
 
-// interface PortfolioData {
-//   categories: string;
-// }
+import './App.css';
+
+import Sidebar from './components/Sidebar';
+import GallerySection from './components/GallerySection';
+import Lightbox from './components/Lightbox';
+
+import portfolioData from './data/portfolio.json';
+
+import type {
+  PortfolioCategory,
+  PortfolioData,
+  PortfolioProject
+} from './types/portfolio';
 
 function App() {
+  const portfolio = portfolioData as PortfolioData;
+
+  const [activeCategory, setActiveCategory] = useState(
+    portfolio.categories[0]?.id ?? ''
+  );
+
+  const [selectedProject, setSelectedProject] =
+    useState<PortfolioProject | null>(null);
+
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  // Handles image paths on both local development and GitHub Pages.
+  const getImageUrl = (path: string) => {
+    if (/^https?:\/\//i.test(path)) {
+      return path;
+    }
+
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+  };
+
+  // Smoothly scroll to the selected portfolio category.
+  const handleNavigate = (categoryId: string) => {
+    setActiveCategory(categoryId);
+
+    const section = galleryRef.current?.querySelector(
+      `#${categoryId}`
+    );
+
+    section?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  // Resume download links.
+  const resumeDocx = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026.docx`;
+  const resumePdf = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026.pdf`;
 
   return (
     <>
+      {/* EXISTING HERO SECTION */}
       <section id="center">
         <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+          <img
+            src={heroImg}
+            className="base"
+            width="170"
+            height="179"
+            alt=""
+          />
+
+          <img
+            src={reactLogo}
+            className="framework"
+            alt="React logo"
+          />
+
+          <img
+            src={viteLogo}
+            className="vite"
+            alt="Vite logo"
+          />
         </div>
+
         <div>
           <h1>Oliver Haran</h1>
+
           <p>
-            Welcome to the potfolio site! For any questions, please email to <a href="mailto:oliverharan@live.com?subject=Github%20Portfolio:%20">oliverharan@live.com</a>
+            Welcome to the portfolio site! For any questions,
+            please email to{' '}
+            <a href="mailto:oliverharan@live.com?subject=Github%20Portfolio:%20">
+              oliverharan@live.com
+            </a>
           </p>
         </div>
-        <button
-          type="button"
-          className="resume"
-          onClick={() => {
-            const link = document.createElement('a');
-            link.href = '/portfolio/docs/Oliver_Haran_Resume_2026.docx';
-            link.download = 'Oliver_Haran_Resume_2026.docx';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-        >
-          Download resume
-        </button>
+
+        <div className="d-flex gap-15">
+          <a
+            href={resumeDocx}
+            download="Oliver_Haran_Resume_2026.docx"
+            className="resume"
+          >
+            Download resume .docx
+          </a>
+
+          <a
+            href={resumePdf}
+            download="Oliver_Haran_Resume_2026.pdf"
+            className="resume"
+          >
+            Download resume .pdf
+          </a>
+        </div>
       </section>
 
       <div className="ticks"></div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      {/* NEW PORTFOLIO SECTION */}
+<section id="next-steps">
+        <div id="nav" className="portfolio-layout">
+        <Sidebar
+          categories={portfolio.categories}
+          activeCategory={activeCategory}
+          onNavigate={handleNavigate}
+        />
         </div>
         <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+                  <main
+          className="portfolio-content"
+          ref={galleryRef}
+        >
+          <div className="portfolio-intro">
+            <h2>Selected Work</h2>
+            <p>
+              A collection of design, development, branding,
+              and photography projects.
+            </p>
+          </div>
+
+          {portfolio.categories.map(
+            (category: PortfolioCategory) => (
+              <GallerySection
+                key={category.id}
+                category={category}
+                onImageClick={setSelectedProject}
+                getImageUrl={getImageUrl}
+              />
+            )
+          )}
+        </main>
         </div>
       </section>
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+
+      {/* FULL-SIZE IMAGE VIEWER */}
+      <Lightbox
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+        getImageUrl={getImageUrl}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
