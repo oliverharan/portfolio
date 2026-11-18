@@ -55,8 +55,8 @@ function App() {
   };
 
   // Resume download links.
-  const resumeDocx = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026.docx`;
-  const resumePdf = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026.pdf`;
+  const resumeDocx = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026_2.docx`;
+  const resumePdf = `${import.meta.env.BASE_URL}docs/Oliver_Haran_Resume_2026_2.pdf`;
 
   return (
     <>
