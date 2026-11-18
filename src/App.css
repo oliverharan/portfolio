@@ -202,16 +202,16 @@
   position: sticky;
   top: 20px;
   align-self: start;
-  padding: 45px 25px;
+  padding: 0 25px;
   min-height: 500px;
   border-right: 1px solid #e5e5e5;
 }
 
 .portfolio-sidebar h2 {
   margin: 0 0 8px;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
-  color: #222;
+  color: var(--text-h);
 }
 
 .sidebar-intro {
@@ -293,7 +293,7 @@
   margin: 0 0 8px;
   font-size: 25px;
   font-weight: 600;
-  color: #222;
+  color: var(--text-h);
 }
 
 .gallery-heading p {
@@ -307,6 +307,7 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 25px;
 }
 
@@ -335,6 +336,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.35s ease;
 }
 

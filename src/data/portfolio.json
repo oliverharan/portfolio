@@ -6,12 +6,194 @@
             "description": "Website design and development projects",
             "projects": [
                 {
+                    "id": "site4",
+                    "title": "Football Scouting Dashboard",
+                    "description": "A dark college-football scouting interface for reviewing player evaluations, alerts, workouts, statistics, and recruiting details.",
+                    "thumbnail": "images/sites/Image_thumb20.webp",
+                    "image": "images/sites/Image20.webp",
+                    "alt": "Dark scouting dashboard showing football player search results and evaluation panels."
+                },
+                {
+                    "id": "site7",
+                    "title": "Athlete Performance Analytics",
+                    "description": "A sports analytics visualization presenting speed and agility metrics, an overall score, and performance charts.",
+                    "thumbnail": "images/sites/Image_thumb09.webp",
+                    "image": "images/sites/Image09.webp",
+                    "alt": "Dark sports analytics graphic with speed and agility ratings, a circular score, and charts."
+                },
+                {
+                    "id": "site5",
+                    "title": "Athlete Search Filters",
+                    "description": "A prospect-search form for filtering players by personal, school, position, and performance criteria.",
+                    "thumbnail": "images/sites/Image_thumb21.webp",
+                    "image": "images/sites/Image21.webp",
+                    "alt": "Dark player-filter screen with grouped criteria and a Filter button."
+                },
+                {
                     "id": "site1",
-                    "title": "Site 1",
-                    "description": "Site 1 website",
-                    "thumbnail": "images/sites/thumb.jpg",
-                    "image": "images/sites/full.jpg",
-                    "alt": "Site 1 website"
+                    "title": "Soolantra Cream Campaign",
+                    "description": "A promotional email for Soolantra cream featuring product information, treatment highlights, and an offer.",
+                    "thumbnail": "images/sites/Image_thumb17.webp",
+                    "image": "images/sites/Image17.webp",
+                    "alt": "Soolantra cream promotional email with product imagery and treatment highlights."
+                },
+                {
+                    "id": "site6",
+                    "title": "Endometrin Promotional Email",
+                    "description": "A product email outlining Endometrin's dosing options and luteal-phase support, with product details and a coupon link.",
+                    "thumbnail": "images/sites/Image_thumb05.webp",
+                    "image": "images/sites/Image05.webp",
+                    "alt": "Endometrin promotional email with dosing highlights, product information, and a coupon link."
+                },
+                {
+                    "id": "site8",
+                    "title": "Janssen High Five Program",
+                    "description": "An employee recognition program page featuring a recognition wheel and award categories.",
+                    "thumbnail": "images/sites/Image_thumb10.webp",
+                    "image": "images/sites/Image10.webp",
+                    "alt": "Janssen High Five recognition page with a 360-degree award wheel and recognition categories."
+                },
+                {
+                    "id": "site9",
+                    "title": "Janssen Culture Vision",
+                    "description": "A corporate culture page presenting Janssen's mission and five guiding principles.",
+                    "thumbnail": "images/sites/Image_thumb11.webp",
+                    "image": "images/sites/Image11.webp",
+                    "alt": "Janssen Culture Vision page with a heart-shaped hands graphic and five culture principles."
+                },
+                {
+                    "id": "site2",
+                    "title": "Janssen Bravo Award Portal",
+                    "description": "An employee recognition portal for reviewing guidance and submitting Bravo Award nominations.",
+                    "thumbnail": "images/sites/Image_thumb18.webp",
+                    "image": "images/sites/Image18.webp",
+                    "alt": "Janssen Bravo Award nomination site with navigation, award information, and a Nominate Now link."
+                },
+                {
+                    "id": "site10",
+                    "title": "Skin Treatment Promotion",
+                    "description": "A skincare marketing page promoting non-surgical treatments and sharing skin-care guidance.",
+                    "thumbnail": "images/sites/Image_thumb12.webp",
+                    "image": "images/sites/Image12.webp",
+                    "alt": "Skincare promotion with treatment imagery and messages about non-surgical skin treatments."
+                },
+                {
+                    "id": "site3",
+                    "title": "Nubank Payment Dashboard",
+                    "description": "A payment operations interface for reviewing debit and outbound payment status reports and transaction details.",
+                    "thumbnail": "images/sites/Image_thumb19.webp",
+                    "image": "images/sites/Image19.webp",
+                    "alt": "Nubank payment dashboard with report fields and debtor and creditor details."
+                },
+                {
+                    "id": "cvs1",
+                    "title": "CVS Pharmacy Services Page",
+                    "description": "A CVS Pharmacy page presenting health and pharmacy offerings in a grid of service cards.",
+                    "thumbnail": "images/sites/cvs1_thumb.webp",
+                    "image": "images/sites/cvs1.webp",
+                    "alt": "CVS Pharmacy page titled All the ways we can help, with a grid of service cards."
+                },
+                {
+                    "id": "cvs2",
+                    "title": "MinuteClinic Virtual Care",
+                    "description": "A healthcare landing page promoting nationwide virtual care, with service details and a visit-scheduling link.",
+                    "thumbnail": "images/sites/cvs2_thumb.webp",
+                    "image": "images/sites/cvs2.webp",
+                    "alt": "MinuteClinic virtual care page showing insurance and cash-pay options beside a video visit."
+                }
+            ]
+        },
+        {
+            "id": "logos",
+            "title": "Logos",
+            "description": "Logo design and visual identity projects",
+            "projects": [
+                {
+                    "id": "logo1",
+                    "title": "Digital News Career Networks",
+                    "description": "A logo concept pairing a pixelated circular emblem with the Digital News Career Networks wordmark.",
+                    "thumbnail": "images/logos/Image_thumb13.webp",
+                    "image": "images/logos/Image12.webp",
+                    "alt": "Digital News Career Networks wordmark beside a pixelated circular emblem in dark gray and amber."
+                },
+                {
+                    "id": "logo2",
+                    "title": "Nubanko Logo Exploration",
+                    "description": "A set of Nubanko logo variations exploring monograms and linked-loop symbols in red and white.",
+                    "thumbnail": "images/logos/Image_thumb14.webp",
+                    "image": "images/logos/Image13.webp",
+                    "alt": "Six Nubanko logo variations arranged in a grid on burgundy and light-gray backgrounds."
+                },
+                {
+                    "id": "logo3",
+                    "title": "Giants ProSync App Badge",
+                    "description": "A New York Football Giants-inspired badge identity for the 2020 ProSync app.",
+                    "thumbnail": "images/logos/Image_thumb15.webp",
+                    "image": "images/logos/Image14.webp",
+                    "alt": "Red, black, and blue New York Giants football badge labeled ProSync App."
+                },
+                {
+                    "id": "logo4",
+                    "title": "Ovation Wordmark",
+                    "description": "A glossy, dimensional script treatment of the Ovation wordmark in pink, purple, and gold.",
+                    "thumbnail": "images/logos/Image_thumb16.webp",
+                    "image": "images/logos/Image15.webp",
+                    "alt": "Three-dimensional pink and purple Ovation script logo with a soft reflection."
+                }
+            ]
+        },
+        {
+            "id": "emails",
+            "title": "Emails",
+            "description": "Email campaigns and digital communication designs",
+            "projects": [
+                {
+                    "id": "email1",
+                    "title": "Commercial Announcement Email",
+                    "description": "A blue-branded internal communication design for an organizational announcement with a featured story and supporting updates.",
+                    "thumbnail": "images/emails/Image_thumb01.webp",
+                    "image": "images/emails/Image01.webp",
+                    "alt": "Commercial announcement email with a blue header, announcement headline, and featured content."
+                },
+                {
+                    "id": "email2",
+                    "title": "Commercial Intranet Newsletter",
+                    "description": "A corporate communications layout combining an announcement story with sidebar updates, weather, and a calendar.",
+                    "thumbnail": "images/emails/Image_thumb02.webp",
+                    "image": "images/emails/Image02.webp",
+                    "alt": "Commercial intranet email with an announcement, sidebar updates, a weather tile, and a calendar."
+                },
+                {
+                    "id": "email3",
+                    "title": "Global Medical Year-End Newsletter",
+                    "description": "A 2015 year-end newsletter for a global medical organization, reflecting on the year's work and pointing readers to additional resources.",
+                    "thumbnail": "images/emails/Image_thumb03.webp",
+                    "image": "images/emails/Image03.webp",
+                    "alt": "Global medical newsletter with a teal-and-green banner and a year-end message."
+                },
+                {
+                    "id": "email4",
+                    "title": "Infocast Digital Signage Guide",
+                    "description": "A promotional one-pager explaining how to create, send, and publish digital-signage content.",
+                    "thumbnail": "images/emails/Image_thumb04.webp",
+                    "image": "images/emails/Image04.webp",
+                    "alt": "Blue Infocast Digital Signage Solutions flyer with create, send, and post steps."
+                },
+                {
+                    "id": "email5",
+                    "title": "ASCRS Live Surgery Invitation",
+                    "description": "An event email promoting the 2017 ASCRS-ASOA live surgery meeting, registration, and cataract-surgery innovations.",
+                    "thumbnail": "images/emails/Image_thumb06.webp",
+                    "image": "images/emails/Image06.webp",
+                    "alt": "ASCRS-ASOA live surgery email with event details and portraits of moderators and faculty."
+                },
+                {
+                    "id": "email6",
+                    "title": "Ciprodex Product Education Email",
+                    "description": "A healthcare email presenting Ciprodex information for middle-ear infections and patient savings resources.",
+                    "thumbnail": "images/emails/Image_thumb07.webp",
+                    "image": "images/emails/Image07.webp",
+                    "alt": "Ciprodex email with a doctor and child, treatment information, and a patient savings offer."
                 }
             ]
         }
